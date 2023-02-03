@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@font-face{
+    src:url(fonts/retro_font.ttf);
+    font-family: retro;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+html, body {
+    background-color: rgb(80, 80, 80);
+    margin: 0;
+    padding: 0;
+}
+
+.home_top {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+.header {
+    font-family: 'Audiowide', cursive;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* positions in the center of parent */
+    font-size: 80px;
+    font-weight: 600;
+    /* -webkit-text-stroke: 2px red; */
+    color: rgb(255, 255, 255);
+    text-shadow: 
+    0 0 1px hsl(0 0% 100% / 0.5),
+    0 0 5px rgb(255, 255, 255),
+    0 0 8px rgb(255, 255, 255),
+    0 0 20px rgb(255, 0, 0),
+    0 0 35px rgb(255, 0, 0),
+    0 0 40px rgb(255, 0, 0),
+    0 0 50px rgb(255, 0, 0),
+    0 0 75px rgb(255, 0, 0);
+    animation: shine_text 3s ease-in-out infinite alternate;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    background: red;
+    top: 120%;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(45deg) scale(1, 0.35);
+    filter: blur(1em);
+    animation: shine_bottom 3s ease-in-out infinite alternate;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    background: red;
+    top: -120%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(-45deg) scale(1, 0.35);
+    filter: blur(1em);
+    animation: shine_top 3s ease-in-out infinite alternate;
+}
+
+@keyframes shine_bottom {
+    from {
+        transform: perspective(1em) rotateX(45deg) scale(1.1, 0.36);
+    }
+
+    to {
+        transform: perspective(1em) rotateX(45deg) scale(1.5, 0.40);
+    }
+}
+
+@keyframes shine_top {
+    from {
+        transform: perspective(1em) rotateX(-45deg) scale(1.1, 0.36);
+    }
+
+    to {
+        transform: perspective(1em) rotateX(-45deg) scale(1.5, 0.40);
+    }
+}
+
+@keyframes shine_text {
+    from{
+        text-shadow: 
+        0 0 1px hsl(0 0% 100% / 0.5),
+        0 0 5px rgb(255, 255, 255),
+        0 0 8px rgb(255, 255, 255),
+        0 0 20px rgb(255, 0, 0),
+        0 0 35px rgb(255, 0, 0),
+        0 0 40px rgb(255, 0, 0),
+        0 0 50px rgb(255, 0, 0),
+        0 0 75px rgb(255, 0, 0);
+    }
+
+    to{
+        text-shadow: 
+        0 0 1px hsl(0 0% 100% / 0.5),
+        0 0 5px rgb(255, 255, 255),
+        0 0 16px rgb(255, 255, 255),
+        0 0 40px rgb(255, 0, 0),
+        0 0 70px rgb(255, 0, 0),
+        0 0 80px rgb(255, 0, 0),
+        0 0 100px rgb(255, 0, 0),
+        0 0 150px rgb(255, 0, 0);
+    }
+}
+
+.paragraph {
+    /* border: 3px solid aqua; */
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+}
+
+#intro_paragraph {
+    font-family: retro;
+    -webkit-text-fill-color: rgb(0, 168, 0);
+}
