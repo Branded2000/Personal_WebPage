@@ -1,92 +1,156 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 @font-face{
     src:url(fonts/retro_font.ttf);
     font-family: retro;
 }
 
+:root{
+    --main_tittle_color: rgb(255, 0, 0);
+}
+
 * {
     box-sizing: border-box;
-    font-family: monospace;
-    font-size: 20px;
+    font-family: retro;
+    font-size: 15px;
 }
 
 html, body {
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: rgb(0, 168, 0);
     margin: 0;
     padding: 0;
 }
 
-.home_top {
-    position: relative;
-    height: 100vh;
+header{
     background-color: black;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
-.header {
+.logo {
+    cursor: pointer;
+}
+
+nav ul{
+    list-style:  none;
+}
+
+
+nav li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav a{
+    /* float: left; */
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover {
+    text-shadow: 
+    0 0 1px hsl(0 0% 100% / 0.5),
+    0 0 2px rgb(255, 255, 255),
+    0 0 3px rgb(255, 255, 255),
+    0 0 5px rgb(0, 168, 0),
+    0 0 7px rgb(0, 168, 0),
+    0 0 10px rgb(0, 168, 0),
+    0 0 12px rgb(0, 168, 0),
+    0 0 15px rgb(0, 168, 0);
+}
+
+button{
+    padding: 0 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+
+button:hover{
+    text-shadow: 
+    0 0 1px hsl(0 0% 100% / 0.5),
+    0 0 2px rgb(255, 255, 255),
+    0 0 3px rgb(255, 255, 255),
+    0 0 5px rgb(0, 168, 0),
+    0 0 7px rgb(0, 168, 0),
+    0 0 10px rgb(0, 168, 0),
+    0 0 12px rgb(0, 168, 0),
+    0 0 15px rgb(0, 168, 0);
+}
+
+.main_tittle {
+    -webkit-text-fill-color: rgb(255, 255, 255);
     font-family: 'Audiowide', cursive;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%); /* positions in the center of parent */
-    font-size: 80px;
+    font-size: 5em;
     font-weight: 600;
-    /* -webkit-text-stroke: 2px red; */
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     color: rgb(255, 255, 255);
+    /* z-index: -5; */
     text-shadow: 
     0 0 1px hsl(0 0% 100% / 0.5),
     0 0 5px rgb(255, 255, 255),
     0 0 8px rgb(255, 255, 255),
-    0 0 20px rgb(255, 0, 0),
-    0 0 35px rgb(255, 0, 0),
-    0 0 40px rgb(255, 0, 0),
-    0 0 50px rgb(255, 0, 0),
-    0 0 75px rgb(255, 0, 0);
+    0 0 20px var(--main_tittle_color),
+    0 0 35px var(--main_tittle_color),
+    0 0 40px var(--main_tittle_color),
+    0 0 50px var(--main_tittle_color),
+    0 0 75px var(--main_tittle_color);
     animation: shine_text 3s ease-in-out infinite alternate;
 }
 
-.header::before {
+.main_tittle::before {
     content: '';
     position: absolute;
-    background: red;
+    background: var(--main_tittle_color);
     top: 120%;
     width: 100%;
     height: 100%;
-    transform: perspective(1em) rotateX(45deg) scale(1, 0.35);
+    transform: perspective(1.2em) rotateX(45deg) scale(1, 0.35);
     filter: blur(1em);
     animation: shine_bottom 3s ease-in-out infinite alternate;
 }
 
-.header::after {
+.main_tittle::after {
     content: '';
     position: absolute;
-    background: red;
+    background: var(--main_tittle_color);
     top: -120%;
     right: 0%;
     width: 100%;
     height: 100%;
-    transform: perspective(1em) rotateX(-45deg) scale(1, 0.35);
+    transform: perspective(1.2em) rotateX(-45deg) scale(1, 0.35);
     filter: blur(1em);
     animation: shine_top 3s ease-in-out infinite alternate;
 }
 
 @keyframes shine_bottom {
     from {
-        transform: perspective(1em) rotateX(45deg) scale(1.1, 0.36);
+        transform: perspective(1.2em) rotateX(45deg) scale(1, 0.36);
     }
 
     to {
-        transform: perspective(1em) rotateX(45deg) scale(1.5, 0.40);
+        transform: perspective(1.2em) rotateX(45deg) scale(1.4, 0.40);
     }
 }
 
 @keyframes shine_top {
     from {
-        transform: perspective(1em) rotateX(-45deg) scale(1.1, 0.36);
+        transform: perspective(1.2em) rotateX(-45deg) scale(1, 0.36);
     }
 
     to {
-        transform: perspective(1em) rotateX(-45deg) scale(1.5, 0.40);
+        transform: perspective(1.2em) rotateX(-45deg) scale(1.4, 0.40);
     }
 }
 
@@ -96,11 +160,11 @@ html, body {
         0 0 1px hsl(0 0% 100% / 0.5),
         0 0 5px rgb(255, 255, 255),
         0 0 8px rgb(255, 255, 255),
-        0 0 20px rgb(255, 0, 0),
-        0 0 35px rgb(255, 0, 0),
-        0 0 40px rgb(255, 0, 0),
-        0 0 50px rgb(255, 0, 0),
-        0 0 75px rgb(255, 0, 0);
+        0 0 20px var(--main_tittle_color),
+        0 0 35px var(--main_tittle_color),
+        0 0 40px var(--main_tittle_color),
+        0 0 50px var(--main_tittle_color),
+        0 0 75px var(--main_tittle_color);
     }
 
     to{
@@ -108,24 +172,96 @@ html, body {
         0 0 1px hsl(0 0% 100% / 0.5),
         0 0 5px rgb(255, 255, 255),
         0 0 16px rgb(255, 255, 255),
-        0 0 40px rgb(255, 0, 0),
-        0 0 70px rgb(255, 0, 0),
-        0 0 80px rgb(255, 0, 0),
-        0 0 100px rgb(255, 0, 0),
-        0 0 150px rgb(255, 0, 0);
+        0 0 40px var(--main_tittle_color),
+        0 0 70px var(--main_tittle_color),
+        0 0 80px var(--main_tittle_color),
+        0 0 100px var(--main_tittle_color),
+        0 0 150px var(--main_tittle_color);
     }
 }
 
-.paragraph {
-    /* border: 3px solid aqua; */
+#intro_p {
+    /* background-color: aqua; */
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
-    width: 80%;
+    width: 65%;
     transform: translate(-50%,-50%);
 }
 
-#intro_paragraph {
-    font-family: retro;
-    -webkit-text-fill-color: rgb(0, 168, 0);
+#reset_type_animation{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#power_button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    left: 48%;
+    transform: translate(-50,-50);
+}
+
+.power_button_red_shade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main_tittle_color);
+    filter: blur(1em);
+    z-index: -1;
+}
+
+.horizintal{
+    transform: scale(.3, .7);
+    animation: button_shine_h 3s ease-in-out infinite alternate;
+}
+
+.vertical{
+    transform: scale(.7, .3);
+    animation: button_shine_v 3s ease-in-out infinite alternate;
+}
+
+#power_button_white_shade{
+    position: absolute;
+    background-color: white;
+    width: 28px;
+    height: 31px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    filter: blur(.3em);
+}
+
+#pwi{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: -16px;
+    margin-left: -25px;
+}
+
+@keyframes button_shine_h{
+    from {
+        transform: scale(.3, .7);
+    }
+
+    to {
+        transform: scale(.5, 1);
+    }
+}
+
+@keyframes button_shine_v{
+    from {
+        transform: scale(.7, .3);
+    }
+
+    to {
+        transform: scale(1, .5);
+    }
 }
