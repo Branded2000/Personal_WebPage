@@ -1,5 +1,5 @@
 const outputDiv = document.getElementById('animated_p');
-const text = 'Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated Line to be animated';
+const text = 'I am Brandon Fuentes. I have recently graduated from the University of California Santa Cruz. I recieved my Bachelors of Science in Computer Sceince. Right now I am looking for an oportunity to gain experience in any field related to Computer Science. Check my projects and send me your feedback by pressing the contact button. Also, if you would like to know more about me, you can check my about page. Thanks for visiting :)';
 const text_cursor = '|';
 let intervalID_text;
 let intervalID_text_cursor;
@@ -25,7 +25,7 @@ function reset(r){
             clearInterval(intervalID_text);
             func_one_done = true;
         }
-    },50);
+    },100);
     
     intervalID_text_cursor = setInterval(function(){
         if(func_one_done){
