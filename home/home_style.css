@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 @font-face{
-    src:url(fonts/retro_font.ttf);
+    src:url(../fonts/retro_font.ttf);
     font-family: retro;
 }
 
@@ -272,7 +272,13 @@ button:hover{
     left: 87%;
 }
 
-.back_color{
+#git{
+    position: absolute;
+    top: 93%;
+    left: 76%;
+}
+
+.back_color_linked{
     position: absolute;
     top: 0;
     left: 0;
@@ -283,9 +289,20 @@ button:hover{
     z-index: -3;
 }
 
+.back_color_git{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8c00e9;
+    filter: blur(1em);
+    z-index: -3;
+}
+
 #back_white_shade{
     position: absolute;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 15px;
     height: 15px;
     top: 50%;
@@ -293,7 +310,16 @@ button:hover{
     margin-top: -7px;
     margin-left: -7px;
     filter: blur(.3em);
+    z-index: -1;
     transition: all .3s ease 0s;
+}
+
+#linked_in:hover{
+    transform: scale(1.3);
+}
+
+#git:hover{
+    transform: scale(1.3);
 }
 
 .shine{
@@ -309,8 +335,4 @@ button:hover{
     to {
         transform: scale(1, 1);
     }
-}
-
-#linked_in:hover{
-    transform: scale(1.3);
 }
