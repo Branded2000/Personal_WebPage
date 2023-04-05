@@ -1,0 +1,99 @@
+header{
+    /* background-color: rgb(229, 25, 25); */
+    /* position: absolute; */
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+    font-size: min(1.5vmax, 20px);
+}
+
+#logo_a{
+    width: 8%;
+    height: 10%;
+}
+
+#logo{
+    /* background-color: blue; */
+    position: absolute;
+    cursor: pointer;
+    width: 10vmax;
+    height: 8vmax;
+    top: -10px;
+    z-index: 3;
+}
+
+#logo img{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    list-style:  none;
+}
+
+
+nav li{
+    /* background-color: aqua; */
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav a{
+    /* float: left; */
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover {
+    text-shadow: 
+    0 0 1px hsl(0 0% 100% / 0.5),
+    0 0 2px rgb(255, 255, 255),
+    0 0 3px rgb(255, 255, 255),
+    0 0 5px rgb(0, 168, 0),
+    0 0 7px rgb(0, 168, 0),
+    0 0 10px rgb(0, 168, 0),
+    0 0 12px rgb(0, 168, 0),
+    0 0 15px rgb(0, 168, 0);
+}
+
+.back_color_capy{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9a6b07;
+    filter: blur(2.5em);
+    z-index: -3;
+}
+
+.shine_capy{
+    transform: scale(.3,.3);
+    animation: shine_c 3s ease-in-out infinite alternate;
+}
+
+@keyframes shine_c{
+    from {
+        transform: scale(.3, .3);
+    }
+
+    to {
+        transform: scale(.6, .6);
+    }
+}
+
+.back_white_shade{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 1em;
+    height: 1em;
+    top: 50%;
+    left: 50%;
+    margin-top: -7px;
+    margin-left: -7px;
+    filter: blur(.5em);
+    z-index: -1;
+    transition: all .3s ease 0s;
+}

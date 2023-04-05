@@ -4,12 +4,18 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="home_style.css" />
+        <link rel="stylesheet" href="../nav/nav.css" />
         <title>Brandon Fuentes</title>
     </head>
 
     <body>
         <header>
-            <a href="https://www.youtube.com/watch?v=QAna8T9wvxw" target="_blank" rel="noopener noreferrer"><img class="logo" src="images/capy_logo.png" alt="logo" width="40" height="40"></a>
+            <a id="logo_a" href="https://www.youtube.com/watch?v=QAna8T9wvxw" target="_blank" rel="noopener noreferrer">
+                <div id="logo">
+                    <div class="back_color_capy shine_capy"></div>
+                    <div class="back_white_shade"></div>
+                    <img src="images/Capy_logo.png">
+                </div></a>
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -19,6 +25,7 @@
             </nav>
             <a class="btn" href="#"><button>Contact</button></a>
         </header>
+
         <div id="power_button">
             <div class="power_button_color_shade horizintal"></div>
             <div class="power_button_color_shade vertical"></div>
@@ -27,7 +34,7 @@
         </div>
         <div class="main_tittle">
             Welcome
-        </div> 
+        </div>
         <div id="intro_p">
             <div>&#47;&#42;</div>
             <div id="animated_p"></div>
@@ -35,20 +42,22 @@
             <div class="reset_type_animation">
                 <button onclick="reset(true)">reset animation</button>
             </div>
+
+            <a href="https://www.linkedin.com/in/brandon--fuentes2000/" target="_blank">
+                <div id="linked_in">
+                    <div class="back_color_linked shine"></div>
+                    <div class="back_white_shade"></div>
+                    <img src="images/linkedin-logo-png-2048.png" width="30px" height="30px">
+                </div></a>
+    
+            <a href="https://github.com/Branded2000" target="_blank" rel="noopener noreferrer">
+                <div id="git">
+                    <div class="back_color_git shine"></div>
+                    <div class="back_white_shade"></div>
+                    <img src="images/GitHub_Logo.png" width="30px" height="30px">
+                </div></a>
         </div>
         <script src="home_js.js"></script>
-
-        <a href="https://www.linkedin.com/in/brandon--fuentes2000/" target="_blank"><div id="linked_in">
-            <div class="back_color_linked shine"></div>
-            <div id="back_white_shade"></div>
-            <img src="images/linkedin-logo-png-2048.png" width="30px" height="30px">
-        </div></a>
-
-        <a href="https://github.com/Branded2000" target="_blank" rel="noopener noreferrer"><div id="git">
-            <div class="back_color_git shine"></div>
-            <div id="back_white_shade"></div>
-            <img src="images/GitHub_Logo.png" width="30px" height="30px">
-        </div></a>
         
     </body>
 
