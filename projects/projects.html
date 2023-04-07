@@ -27,65 +27,75 @@
             <a class="btn" href="#"><button>Contact</button></a>
         </header>
 
-        <div class="mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="project_cards swiper-slide">
-                        <div class="content">
-                            <h2 class="card_title">Project 1</h2>
-                            <p class="card_description"> Some description ...</p>
-                            <button>Check Full Project</button>
+        <div class="container">
+            <div class="mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="project_cards swiper-slide">
+                            <div class="content">
+                                <h2 class="card_title">Project 1</h2>
+                                <p class="card_description"> Some description ...</p>
+                                <button>Check Full Project</button>
+                            </div>
+                        </div>
+                        <div class="project_cards swiper-slide">
+                            <div class="content">
+                                <h2 class="card_title">Project 2</h2>
+                                <p class="card_description"> Some description ...</p>
+                                <button>Check Full Project</button>
+                            </div>
+                        </div>
+                        <div class="project_cards swiper-slide">
+                            <div class="content">
+                                <h2 class="card_title">Project 3</h2>
+                                <p class="card_description"> Some description ...</p>
+                                <button>Check Full Project</button>
+                            </div>
+                        </div>
+                        <div class="project_cards swiper-slide">
+                            <div class="content">
+                                <h2 class="card_title">Project 4</h2>
+                                <p class="card_description"> Some description ...</p>
+                                <button>Check Full Project</button>
+                            </div>
+                        </div>
+                        <div class="project_cards swiper-slide">
+                            <div class="content">
+                                <h2 class="card_title">Project 5</h2>
+                                <p class="card_description"> Some description ...</p>
+                                <button>Check Full Project</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="project_cards swiper-slide">
-                        <div class="content">
-                            <h2 class="card_title">Project 2</h2>
-                            <p class="card_description"> Some description ...</p>
-                            <button>Check Full Project</button>
-                        </div>
-                    </div>
-                    <div class="project_cards swiper-slide">
-                        <div class="content">
-                            <h2 class="card_title">Project 3</h2>
-                            <p class="card_description"> Some description ...</p>
-                            <button>Check Full Project</button>
-                        </div>
-                    </div>
-                    <div class="project_cards swiper-slide">
-                        <div class="content">
-                            <h2 class="card_title">Project 4</h2>
-                            <p class="card_description"> Some description ...</p>
-                            <button>Check Full Project</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
         <script>
             const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2,
-            spaceBetween: 150,
+            slidesPerView: 'auto',
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            spaceBetween: 200,
             loop: true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 90,
+                modifier: 2.5,
+            },
             pagination: {
                 el: ".swiper-pagination",
-                // clickable: true,
+                clickable: true,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
+            autoplay: {
+                delay: 1000,
+                pauseOnMouseEnter: true,
             },
             });
         </script>
-        <canvas id="bonefire"></canvas>
-        <!-- <script src="https://threejs.org/build/three.js"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/three-gltf-loader@1.111.0/index.min.js"></script> -->
-        <!-- <script type="module">import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three-gltf-loader@1.111.0/index.min.js';</script> -->
-        <!-- <script src="https://threejs.org/examples/jsm/loaders/GLTFLoader.js"></script>  -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.138.3/build/three.min.js"></script> -->
+        <!-- <canvas id="bonefire"></canvas> -->
         <script type="module" src="projects_js.js"></script>
 
     </body>

@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <div id="bc"></div>
         <header>
             <a id="logo_a" href="https://www.youtube.com/watch?v=QAna8T9wvxw" target="_blank" rel="noopener noreferrer">
                 <div id="logo">
@@ -58,6 +59,26 @@
                 </div></a>
         </div>
         <script src="home_js.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+        <script>
+        VANTA.BIRDS({
+                el: "#bc",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: true,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                backgroundColor: 0x0,
+                quantity: 2.00,
+                birdSize: 1.00,
+                wingSpan: 10.00,
+                color1: 0xff00,
+                color2: 0xffffff
+            })
+          </script>
         
     </body>
 

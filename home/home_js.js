@@ -48,7 +48,6 @@ var color_var = document.querySelector(':root');
 function change_color(){
     if(color_interval === (color_rotation.length)){
         color_interval = 0;
-        console.log(color_interval)
     }
     color_var.style.setProperty('--main_tittle_color', color_rotation[color_interval]);
     color_interval += 1;

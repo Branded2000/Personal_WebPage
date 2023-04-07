@@ -20,7 +20,7 @@ header{
     cursor: pointer;
     width: 10vmax;
     height: 8vmax;
-    top: -10px;
+    top: 0px;
     z-index: 3;
 }
 

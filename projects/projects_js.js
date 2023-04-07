@@ -1,8 +1,5 @@
-// import * as THREE from "/../node_modules/three/src/Three.js";
 import * as THREE from '../node_modules/three/build/three.module.js';
-// import GLTFLoader from 'three-gltf-loader';
 import { GLTFLoader } from "/../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-// import GLTFLoader from 'three-gltf-loader';
 
 // console.log(THREE);
 const scene = new THREE.Scene();
