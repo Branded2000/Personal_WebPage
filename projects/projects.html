@@ -1,102 +1,80 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="projects_style.css" />
-        <link rel="stylesheet" href="../nav/nav.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <title>BF Projects</title>
-    </head>
 
-    <body>
-        <header>
-            <a id="logo_a" href="https://www.youtube.com/watch?v=QAna8T9wvxw" target="_blank" rel="noopener noreferrer">
-                <div id="logo">
-                    <div class="back_color_capy shine_capy"></div>
-                    <div class="back_white_shade"></div>
-                    <img src="../home/images/Capy_logo.png">
-                </div></a>
-            <nav>
-                <ul>
-                    <li><a href="../home/home.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="../about/about.html">About</a></li>
-                </ul>
-            </nav>
-            <a class="btn" href="#"><button>Contact</button></a>
-        </header>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="projects_style.css" />
+    <link rel="stylesheet" href="../nav/nav.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>BF Projects</title>
+</head>
 
-        <div class="container">
-            <div class="mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="project_cards swiper-slide">
-                            <div class="content">
-                                <h2 class="card_title">Project 1</h2>
-                                <p class="card_description"> Some description ...</p>
-                                <button>Check Full Project</button>
-                            </div>
-                        </div>
-                        <div class="project_cards swiper-slide">
-                            <div class="content">
-                                <h2 class="card_title">Project 2</h2>
-                                <p class="card_description"> Some description ...</p>
-                                <button>Check Full Project</button>
-                            </div>
-                        </div>
-                        <div class="project_cards swiper-slide">
-                            <div class="content">
-                                <h2 class="card_title">Project 3</h2>
-                                <p class="card_description"> Some description ...</p>
-                                <button>Check Full Project</button>
-                            </div>
-                        </div>
-                        <div class="project_cards swiper-slide">
-                            <div class="content">
-                                <h2 class="card_title">Project 4</h2>
-                                <p class="card_description"> Some description ...</p>
-                                <button>Check Full Project</button>
-                            </div>
-                        </div>
-                        <div class="project_cards swiper-slide">
-                            <div class="content">
-                                <h2 class="card_title">Project 5</h2>
-                                <p class="card_description"> Some description ...</p>
-                                <button>Check Full Project</button>
-                            </div>
-                        </div>
+<body>
+    <header>
+        <a id="logo_a" href="https://www.youtube.com/watch?v=QAna8T9wvxw" target="_blank" rel="noopener noreferrer">
+            <div id="logo">
+                <div class="back_color_capy shine_capy"></div>
+                <div class="back_white_shade"></div>
+                <img src="../home/images/Capy_logo.png">
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="../about/about.html">About</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="#"><button>Contact</button></a>
+    </header>
+
+    <div class="container">
+        <div class="mySwiper">
+            <div class="swiper-wrapper">
+                <div class="project_cards swiper-slide server">
+                    <div class="content">
+                        <h2 class="card_title">HTTP Server</h2>
+                        <p class="card_description"> Some description ...</p>
+                        <button>Check Full Project</button>
                     </div>
+                </div>
+                <div class="project_cards swiper-slide stock_app">
+                    <div class="content">
+                        <h2 class="card_title">Slug Stocks</h2>
+                        <p class="card_description"> Some description ...</p>
+                        <button>Check Full Project</button>
+                    </div>
+                </div>
+                <div class="project_cards swiper-slide nasa_rover">
+                    <div class="content">
+                        <h2 class="card_title">NASA Rover</h2>
+                        <p class="card_description"> Some description ...</p>
+                        <button>Check Full Project</button>
+                    </div>
+                </div>
+                <div class="project_cards swiper-slide">
+                    <div class="content">
+                        <h2 class="card_title">Project 4</h2>
+                        <p class="card_description"> Some description ...</p>
+                        <button>Check Full Project</button>
+                    </div>
+                </div>
+                <div class="project_cards swiper-slide">
+                    <div class="content">
+                        <h2 class="card_title">Project 5</h2>
+                        <p class="card_description"> Some description ...</p>
+                        <button>Check Full Project</button>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    </div>
 
-        <script>
-            const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 'auto',
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            spaceBetween: 200,
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 90,
-                modifier: 2.5,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 1000,
-                pauseOnMouseEnter: true,
-            },
-            });
-        </script>
-        <!-- <canvas id="bonefire"></canvas> -->
-        <script type="module" src="projects_js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <canvas id="bonefire"></canvas> -->
+    <script type="module" src="projects_js.js"></script>
 
-    </body>
+</body>
+
 </html>
